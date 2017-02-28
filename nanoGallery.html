@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title></title>
+
+
+    <link rel="stylesheet" href="static/external/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="static/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>bootstrap</h1>
+            </div>
+        </div>
+        <div id="nanoGallery">
+            <a href="static/img/img_01.jpg" data-ngthumb="image_01ts.jpg" data-ngdesc="Description1">Image1</a>
+            <a href="static/img/img_02.jpg" data-ngthumb="image_02ts.jpg" data-ngdesc="Description2">Image2</a>
+            <a href="static/img/img_03.jpg" data-ngthumb="image_03t.jpg" data-ngdesc="Description3">Image3</a>
+        </div>
+    </div>
+
+
+    <script src="static/external/jquery-3.1.1.js"></script>
+    <script src="static/external/bootstrap/js/bootstrap.min.js"></script>
+</body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("body").css({
+            background: '#333',
+            color: '#eee'
+        });
+        jQuery("#nanoGallery").nanoGallery({
+            thumbnailWidth: 'auto',
+            thumbnailHeight: 100,
+            locationHash: false,
+            thumbnailHoverEffect: 'borderLighter,imageScaleIn80',
+            itemsBaseURL: 'http://nanogallery.brisbois.fr/demonstration/'
+        });
+    });
+</script>
+
+</html>
